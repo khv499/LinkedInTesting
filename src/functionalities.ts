@@ -20,17 +20,19 @@ export class Functionalities extends BasePage{
 
     loginWithWrongCredentials(){
         this.open()
-        this.elements.emailAddress.setValue(this.emailAddress)
-        this.elements.password.setValue(this.password)
-        this.elements.signIn.click()
+        this.elements.loginEmailAddress.setValue(this.emailAddress)
+        this.elements.loginPassword.setValue(this.password)
+        this.elements.loginSignIn.click()
         browser.pause(2000)
     }
 
     loginWithCorrectCredentials() {
         this.open()
-        this.elements.emailAddress.setValue(this.emailAddress)
-        this.elements.password.setValue(this.password)
-        this.elements.signIn.click()
+        this.elements.loginEmailAddress.setValue(this.emailAddress)
+        this.elements.loginPassword.setValue(this.password)
+        this.elements.loginSignIn.click()
         browser.pause(2000)
     }
+
+    
 }
