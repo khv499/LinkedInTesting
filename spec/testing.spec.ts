@@ -1,17 +1,17 @@
-import {Login} from '../src/login' 
+import {Functionalities} from '../src/functionalities' 
 import {Values} from '../config/values'
 
 let values = new Values();
 
-describe("login Validation : ", function(){
-    beforeEach(function(){
-        jasmine.DEFAULT_TIMEOUT_INTERVAL = 600000 
-    })
-    // Login with correct credentials
-    it("Correct Credentials", function(){
-        let test = new Login(values.emailId,values.password)
-        test.loginWithCorrectCredentials()
-        let title = browser.getTitle()
-        expect(title).toBe('LinkedIn')
+describe("UI Automation", function(){
+    it("LinkedIn Full Functionalities", function(){
+        let test1 = new Functionalities(values.emailId,values.wrongPassword)
+        test1.loginWithWrongCredentials()
+        let title1 = browser.getTitle()
+        expect(title1).toBe('Sign In to LinkedIn')
+        let test2 = new Functionalities(values.emailId,values.password)
+        test2.loginWithCorrectCredentials()
+        let title2 = browser.getTitle()
+        expect(title2).toContain('LinkedIn')
     })
 })
