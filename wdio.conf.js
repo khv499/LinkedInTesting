@@ -18,7 +18,6 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        // './test/specs/**/*.js'
         './lib/spec/testing.spec.js'
     ],
     // Patterns to exclude.
@@ -53,7 +52,11 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 1,
         //
-        browserName: 'chrome'
+        browserName: 'chrome',
+        // If outputDir is provided WebdriverIO can capture driver session logs
+        // it is possible to configure which logTypes to include/exclude.
+        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+        // excludeDriverLogs: ['bugreport', 'server'],
     }],
     //
     // ===================
@@ -61,11 +64,22 @@ exports.config = {
     // ===================
     // Define all options that are relevant for the WebdriverIO instance here
     //
-    // Level of logging verbosity: trace | debug | info | warn | error
-    // logLevel: "info",
+    // Level of logging verbosity: trace | debug | info | warn | error | silent
+    //logLevel: 'info',
     //
-    // Warns when a deprecated command is used
-    deprecationWarnings: true,
+    // Set specific log levels per logger
+    // loggers:
+    // - webdriver, webdriverio
+    // - wdio-applitools-service, wdio-browserstack-service, wdio-devtools-service, wdio-sauce-service
+    // - wdio-mocha-framework, wdio-jasmine-framework
+    // - wdio-local-runner, wdio-lambda-runner
+    // - wdio-sumologic-reporter
+    // - wdio-cli, wdio-config, wdio-sync, wdio-utils
+    // Level of logging verbosity: trace | debug | info | warn | error | silent
+    // logLevels: {
+        // webdriver: 'info',
+        // 'wdio-applitools-service': 'info'
+    // },
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
@@ -75,7 +89,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://www.linkedin.com/',
+    baseUrl: 'https://in.linkedin.com/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -91,7 +105,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ["selenium-standalone"],//
+    services: ["selenium-standalone"],
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks.html
@@ -99,6 +113,9 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'jasmine',
+    //
+    // The number of times to retry the entire specfile when it fails as a whole
+    // specFileRetries: 1,
     //
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
