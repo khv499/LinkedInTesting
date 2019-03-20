@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "outDir": "lib",
+        "sourceMap": false,
+        "rootDir": "."
+    },
+    "include": [
+        "src/*",
+        "pages/*",
+        "config/*",
+        "spec/testing.spec.ts"
+      ],
+      "exclude": [
+        "node_modules"
+      ]
+}
