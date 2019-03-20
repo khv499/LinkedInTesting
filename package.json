@@ -4,7 +4,7 @@
   "description": "UI Automation Testing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "wdio wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/khv499/LinkedInTesting#readme",
   "dependencies": {
-    "faker": "^4.1.0",
     "webdriverio": "^4.5.0",
+    "@types/webdriverio": "^4.4.0",
     "@types/jasmine": "^3.3.9",
     "wdio-selenium-standalone-service": "0.0.12",
     "wdio-jasmine-framework": "^0.3.8"
