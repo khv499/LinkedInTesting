@@ -4,7 +4,8 @@
         "module": "commonjs",
         "outDir": "lib",
         "sourceMap": false,
-        "rootDir": "."
+        "rootDir": ".",
+        "types": ["jasmine","@wdio/sync","node"]
     },
     "include": [
         "src/*",
