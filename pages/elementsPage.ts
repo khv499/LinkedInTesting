@@ -12,20 +12,20 @@ export class ElementsPage{
         return browser.$('#login-submit')
     }
     // My Network in Navigation Bar
-    get myNetwork(){
+    get myNetworkIcon(){
         return browser.$('#mynetwork-tab-icon')
     }
     // Manage All link at My Network
     get manageAll(){
-        return browser.$('span = Manage all')
+        return browser.$('//a[@href = "/mynetwork/invitation-manager/"]')
     }
     // See All Connections at Manage All
     get seeAllConnections(){
-        return browser.$('span = See all')
+        return browser.$('//a[@href = "/mynetwork/invite-connect/connections/"]')
     }
     // Search by name
     get searchByName(){
-        return browser.$('#ember6242')
+        return browser.$('//input[@placeholder = "Search by name"]')
     }
     // Message in Search Box
     get messageButton(){
