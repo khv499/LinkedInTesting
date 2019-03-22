@@ -39,3 +39,9 @@ Write scripts in typescript and then execute 'tsc' command which will create js 
 
 Step 9:
 Execute command 'npm test' which will test testcases in testing.spec.js file
+
+Step 10:
+If server didn't start then we need to install package webdriver-manager globally
+npm i -g webdriver-manager
+webdriver-manager update --ignore_ssl
+webdriver-manager start --ignore_ssl
