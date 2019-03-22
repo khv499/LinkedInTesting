@@ -29,15 +29,15 @@ export class ElementsPage{
     }
     // Message in Search Box
     get messageButton(){
-        return browser.$('span = Message')
+        return browser.$('//span[text() = "Message"]/parent::button')
     }
     // Text Box in Message Box
     get textMessage(){
-        return browser.$('#ember6964')
+        return browser.$('//div[@role = "textbox"]')
     }
     // Send Button in Message Box
     get sendButton(){
-        return browser.$('button = Send')
+        return browser.$('//button[text() = "Send"]')
     }
     // Cancel Button in Mesage Box
     get cancelButton(){
