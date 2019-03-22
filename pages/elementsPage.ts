@@ -45,10 +45,10 @@ export class ElementsPage{
     }
     // Get Groups in My Network
     get groups(){
-        return browser.$('#ember7496')
+        return browser.$('//a[@href = "/groups/my-groups/"]')
     }
-    // Select first group
+    // Select first group 
     get firstGroup(){
-        return browser.$('#ember7648')
+        return browser.$('//a[@href = "/groups/4332669/"]')
     } 
 }
