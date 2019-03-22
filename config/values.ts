@@ -3,5 +3,7 @@ export class Values{
     password = 'Secure@45';
     wrongPassword = 'Abc123456789';
     searchName = 'Vamsi Krishna Koneru';
-    message = 'Hey'
+    message = 'Hey';
+    jobTitle = 'Data Scientist';
+    jobLocation = 'India';
 }
