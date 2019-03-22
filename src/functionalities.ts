@@ -8,13 +8,17 @@ export class Functionalities extends BasePage{
     password : string;
     searchName : string;
     message : string;
+    jobTitle : string;
+    jobLocation : string;
 
-    constructor(emailAddress: string, password: string, searchName : string, message : string){
+    constructor(emailAddress: string, password: string, searchName : string, message : string, jobTitle : string, jobLocation : string){
         super();
         this.emailAddress = emailAddress;
         this.password = password;
         this.searchName = searchName;
         this.message = message;
+        this.jobTitle = jobTitle;
+        this.jobLocation = jobLocation;
         this.elements = new ElementsPage();
     }
 
@@ -60,7 +64,22 @@ export class Functionalities extends BasePage{
         browser.pause(3000)
         this.elements.firstGroup.click()
         browser.pause(3000)
-        this.elements.myNetworkIcon.click()
+        this.elements.homeIcon.click()
         browser.pause(3000)
     } 
+
+    jobs(){
+        this.elements.jobsTabIcon.click()
+        browser.pause(2000)
+        this.elements.searchJobs.setValue(this.jobTitle)
+        browser.pause(2000)
+        this.elements.searchLocation.setValue(this.jobLocation)
+        browser.pause(2000)
+        this.elements.searchButton.click()
+        browser.pause(3000)
+        this.elements.datePosted.setValue(this.jobTitle)
+        browser.pause(2000)
+    }
+
+     
 }
