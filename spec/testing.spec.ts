@@ -5,11 +5,11 @@ let values = new Values();
 
 describe("UI Automation", function(){
     it("LinkedIn Full Functionalities", function(){
-        // let test1 = new Functionalities(values.emailId, values.wrongPassword, values.searchName, values.message)
+        // let test1 = new Functionalities(values.emailId, values.wrongPassword, values.searchName, values.message, values.jobTitle, values.jobLocation)
         // test1.loginWithWrongCredentials()
         // let title1 = browser.getTitle()
         // expect(title1).toBe('Sign In to LinkedIn')
-        let test2 = new Functionalities(values.emailId, values.password, values.searchName, values.message)
+        let test2 = new Functionalities(values.emailId, values.password, values.searchName, values.message, values.jobTitle, values.jobLocation)
         test2.loginWithCorrectCredentials()
         let title2 = browser.getTitle()
         expect(title2).toContain('LinkedIn')
