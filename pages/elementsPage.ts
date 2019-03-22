@@ -11,6 +11,10 @@ export class ElementsPage{
     get loginSignIn(){
         return browser.$('#login-submit')
     }
+    // Home in Navigation Bar
+    get homeIcon(){
+        return browser.$('#feed-tab-icon')
+    }
     // My Network in Navigation Bar
     get myNetworkIcon(){
         return browser.$('#mynetwork-tab-icon')
@@ -51,4 +55,40 @@ export class ElementsPage{
     get firstGroup(){
         return browser.$('//a[@href = "/groups/4332669/"]')
     } 
+    // Jobs in Navigation Bar
+    get jobsTabIcon(){
+        return browser.$('#jobs-tab-icon')
+    }
+    // Search Jobs in Jobs 
+    get searchJobs(){
+        return browser.$('// input[@placeholder="Search jobs"]')
+    }
+    // Search location in Jobs 
+    get searchLocation(){
+        return browser.$('// input[@placeholder="Search location"]')
+    }
+    // Search in Jobs
+    get searchButton(){
+        return browser.$('// button[text()="Search"]')
+    }
+    // Date Posted in Filters
+    get datePosted(){
+        return browser.$('// h3[text() = "Date Posted"]')
+    }
+    // LinkedIn Features in Filters
+    get linkedInFeatures(){
+        return browser.$('// h3[text() = "LinkedIn Features"]')
+    }
+    // Company in Filters
+    get company(){
+        return browser.$('// h3[text() = "Company"]')
+    }
+    // Experience Level in Filters
+    get experienceLevel(){
+        return browser.$('// h3[text() = "Experience Level"]')
+    }
+    // Clear filters
+    get clearFilters(){
+        return browser.$('// span[text() = "Clear "]/parent::button')
+    }
 }
