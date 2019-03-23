@@ -106,4 +106,15 @@ export class Functionalities extends BasePage{
         this.elements.jobsTabIcon.click()
         browser.pause(2000)
     }
+
+    messaging(){
+        this.elements.messagingIcon.click()
+        browser.pause(2000)
+        this.elements.textMessage.addValue(this.message)
+        browser.pause(3000)
+        this.elements.sendButton.click()
+        browser.pause(3000)
+        this.elements.homeIcon.click()
+        browser.pause(2000)
+    }
 }
