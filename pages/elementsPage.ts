@@ -123,4 +123,8 @@ export class ElementsPage{
     get clearFilters(){
         return browser.$('// span[text() = "Clear "]/parent::button')
     }
+    // Messaging Icon in Navigation Bar
+    get messagingIcon(){
+        return browser.$('#messaging-tab-icon')
+    }
 }
