@@ -135,4 +135,17 @@ export class ElementsPage{
     get seeAllViews(){
         return browser.$('// span[text()="See all views"]/parent::button')
     }
+    // Navigation Settings Dropdown
+    get naviagtionSettings(){
+        return browser.$('#nav-settings__dropdown')
+    }
+    // View Profile Button
+    get viewProfile(){
+        return browser.$('(// a[@href = "/in/harshavardhan-koneru/"])[1]')
+    }
+    // sign out 
+    get signOut()
+    {
+        return browser.$('// a[text() = "Sign out"]')
+    }
 }
