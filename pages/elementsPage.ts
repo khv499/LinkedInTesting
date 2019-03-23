@@ -127,4 +127,12 @@ export class ElementsPage{
     get messagingIcon(){
         return browser.$('#messaging-tab-icon')
     }
+    // Notifications in Navigation Bar 
+    get notificationIcon(){
+        return browser.$('#notifications-tab-icon')
+    }
+    // See all views in Notifications
+    get seeAllViews(){
+        return browser.$('// span[text()="See all views"]/parent::button')
+    }
 }
