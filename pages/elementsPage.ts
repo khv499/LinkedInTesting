@@ -73,19 +73,51 @@ export class ElementsPage{
     }
     // Date Posted in Filters
     get datePosted(){
-        return browser.$('// h3[text() = "Date Posted"]')
+        return browser.$('// h3[text() = "Date Posted"]/ancestor::button')
+    }
+    // Past Month Date Posted in Filters
+    get pastMonthDatePosted(){
+        return browser.$('(// div[@id = "date-posted-facet-values"]/descendant::li)[3]')
+    } 
+    // Date Posted Apply Button in Filters
+    get datePostedApply(){
+        return browser.$('(//span[text() = "Apply"]/parent::button)[1]')
     }
     // LinkedIn Features in Filters
     get linkedInFeatures(){
-        return browser.$('// h3[text() = "LinkedIn Features"]')
+        return browser.$('// h3[text() = "LinkedIn Features"]/ancestor::button')
+    }
+    // Under Ten Applicants LinkedIn Features in Filters
+    get underTenApplicants(){
+        return browser.$('(// div[@id = "linkedin-features-facet-values"]/descendant::li)[3]')
+    }
+    // LinkedIn Features Apply Button in Filters
+    get linkedInFeaturesApply(){
+        return browser.$('(//span[text() = "Apply"]/parent::button)[2]')
     }
     // Company in Filters
     get company(){
-        return browser.$('// h3[text() = "Company"]')
+        return browser.$('// h3[text() = "Company"]/ancestor::button')
+    }
+    // First Company in Filters
+    get firstCompany(){
+        return browser.$('(// div[@id = "company-facet-values"]/descendant::li)[1]')
+    }
+    // Company Apply in Filters
+    get companyApply(){
+        return browser.$('(//span[text() = "Apply"]/parent::button)[3]')
     }
     // Experience Level in Filters
     get experienceLevel(){
-        return browser.$('// h3[text() = "Experience Level"]')
+        return browser.$('// h3[text() = "Experience Level"]/ancestor::button')
+    }
+    // Mid - Senior Level Experience Level
+    get professionLevel(){
+        return browser.$('(// div[@id = "experience-level-facet-values"]/descendant::li)[4]')
+    }
+    // Experience Level Apply in Filters
+    get experienceLevelApply(){
+        return browser.$('(//span[text() = "Apply"]/parent::button)[4]')
     }
     // Clear filters
     get clearFilters(){
