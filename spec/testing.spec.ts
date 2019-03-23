@@ -19,5 +19,8 @@ describe("UI Automation", function(){
         // test2.jobs()
         // let title4 = browser.getTitle()
         // expect(title4).toContain('Jobs | LinkedIn')
+        // test2.messaging()
+        // let title5 = browser.getTitle()
+        // expect(title5).toContain('LinkedIn')
     })
 })
