@@ -117,4 +117,13 @@ export class Functionalities extends BasePage{
         this.elements.homeIcon.click()
         browser.pause(2000)
     }
+
+    notifications(){
+        this.elements.notificationIcon.click()
+        browser.pause(2000)
+        this.elements.seeAllViews.click()
+        browser.pause(4000)
+        this.elements.notificationIcon.click()
+        browser.pause(2000)
+    }
 }
