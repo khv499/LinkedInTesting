@@ -32,6 +32,7 @@ export class Functionalities extends BasePage{
         this.elements.loginEmailAddress.setValue(this.emailAddress)
         this.elements.loginPassword.setValue(this.password)
         this.elements.loginSignIn.click()
+        browser.pause(2000)
     }
 
     loginWithCorrectCredentials() {
@@ -39,6 +40,7 @@ export class Functionalities extends BasePage{
         this.elements.loginEmailAddress.setValue(this.emailAddress)
         this.elements.loginPassword.setValue(this.password)
         this.elements.loginSignIn.click()
+        browser.pause(2000)
     }
 
     myNetwork(){
@@ -124,6 +126,20 @@ export class Functionalities extends BasePage{
         this.elements.seeAllViews.click()
         browser.pause(4000)
         this.elements.notificationIcon.click()
+        browser.pause(2000)
+    }
+
+    profile(){
+        this.elements.naviagtionSettings.click()
+        browser.pause(4000)
+        this.elements.viewProfile.click()
+        browser.pause(2000)
+    }
+
+    signOut(){
+        this.elements.naviagtionSettings.click()
+        browser.pause(4000)
+        this.elements.signOut.click()
         browser.pause(2000)
     }
 }
