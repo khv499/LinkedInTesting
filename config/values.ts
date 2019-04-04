@@ -1,8 +1,8 @@
 export class Values{
-    emailId = 'koneru.harshavardhan499@gmail.com';
-    password = 'Secure@45';
+    emailId = 'abc@gmail.com';
+    password = '**********';
     wrongPassword = 'Abc123456789';
-    searchName = 'Vamsi Krishna Koneru';
+    searchName = 'Friend Name';
     message = 'Hey';
     jobTitle = 'Data Scientist';
     jobLocation = 'India';
